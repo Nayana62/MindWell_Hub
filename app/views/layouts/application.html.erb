@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
-    <%= yield %>
+    <% if flash[:notice]%>
+      <div class="alert alert-primary" role="alert">
+        <%= notice %>
+      </div>
+    <% end %>
+    <% if flash[:alert]%>
+      <div class="alert alert-danger" role="alert">
+        <%= alert %>
+      </div>
+    <% end %>
+    <div>
+      <%= yield %>
+    </div>
   </body>
 </html>

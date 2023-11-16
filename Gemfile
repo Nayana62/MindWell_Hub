@@ -26,6 +26,24 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Integrate SassC-Ruby into Rails.
+gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
+
+# The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web. http://getbootstrap.com
+gem 'bootstrap', '~> 5.3', '>= 5.3.2'
+
+# Forms made easy!
+gem 'simple_form', '~> 5.3'
+
+# A configurable and documented Rails view helper for adding gravatars into your Rails application.
+gem 'gravatar_image_tag', '~> 1.2'
+
+# Flexible authentication solution for Rails with Warden
+gem 'devise', '~> 4.9', '>= 4.9.3'
+
+gem "font-awesome-rails"
+
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -58,6 +76,21 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # Preloads your application so things like console, rake and tests run faster
+  gem 'spring', '~> 4.1', '>= 4.1.1'
+
+  # Makes spring watch files using the listen gem.
+  gem 'spring-watcher-listen', '~> 2.1'
+
+  # Provides a better error page for Rails and other Rack apps. Includes source code inspection, a live REPL and local/instance variable inspection for all stack frames.
+  gem 'better_errors', '~> 2.10', '>= 2.10.1'
+
+  # Guard is a command line tool to easily handle events on file system modifications.
+  gem 'guard', '~> 2.18', '>= 2.18.1'
+
+  # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 
 end
 

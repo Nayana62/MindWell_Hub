@@ -1,0 +1,46 @@
+<%= render 'nav'%>
+<div class="container mt-5">
+  <h1 class="mb-4">Posts Feed</h1>
+  <% if user_signed_in? %>
+    <%= link_to 'New Post', new_post_path, class: 'btn btn-primary mb-4' %>
+  <% end %>
+  <% @posts.each do |post| %>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title"><%= post.content %></h5>
+        <p class="card-text">Posted by: <%= post.user.email %></p>
+        <p class="card-text">Likes: <%= post.likes.count %></p>
+        <% if user_signed_in? %>
+          <% if current_user.likes?(post) %>
+            <%= form_tag unlike_post_path(post), method: :delete, class: 'like-form' do %>
+              <%= submit_tag 'Unlike', class: 'btn btn-danger' %>
+            <% end %>
+          <% else %>
+            <%= form_tag like_post_path(post), method: :post, class: 'like-form' do %>
+              <%= submit_tag 'Like', class: 'btn btn-primary' %>
+            <% end %>
+          <% end %>
+          <%= form_for [post, Comment.new], class: 'comment-form' do |f| %>
+            <div class="form-group">
+              <%= f.label :content, 'Add a Comment' %>
+              <%= f.text_area :content, class: 'form-control' %>
+            </div>
+            <%= f.submit 'Post Comment', class: 'btn btn-success' %>
+          <% end %>
+          <% if post.comments.any? %>
+            <div class="mt-3">
+              <h6>Comments:</h6>
+              <% post.comments.each do |comment| %>
+                <div class="card mb-2">
+                  <div class="card-body">
+                    <p class="card-text"><strong><%= comment.user.present? ? comment.user.email : 'Guest' %></strong>: <%= comment.content %></p>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

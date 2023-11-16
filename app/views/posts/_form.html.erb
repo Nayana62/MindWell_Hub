@@ -1,0 +1,7 @@
+<%= simple_form_for(@post, html: { class: 'mt-5' }) do |f| %>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: 'form-control' %>
+  </div>
+  <%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>

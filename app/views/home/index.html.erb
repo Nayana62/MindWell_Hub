@@ -1,0 +1,70 @@
+<div class="hero d-md-flex flex-md-column bg-a7d5ff">
+  <nav class="navbar navbar-expand-lg d-flex justify-content-between">
+    <%= link_to 'MindWell Hub', root_path, class: 'navbar-brand fw-bold fs-4' %>
+    <div class="navbar-nav ml-auto">
+      <%= link_to 'Login', new_user_session_path, class: 'btn btn-purple' %>
+      <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-purple' %>
+    </div>
+  </nav>
+  <div class="container box-container">
+    <div class="d-md-flex justify-content-between">
+      <div class="text mb-4 mb-md-0">
+        <h1 class="font-size-lg">Your Mental Well-being, Our Priority</h1>
+        <p class="font-size-md">Join us in cultivating a community of support and understanding</p>
+        <%= link_to 'Get started', new_user_registration_path, class: 'btn btn-purple2' %>
+      </div>
+      <div class="img">
+        <%= image_tag('hero-bg.png', alt: 'Hero Image', class: 'img-fluid') %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hero2 d-md-flex flex-md-column bg-a7d5ff">
+  <div class="section">
+    <div class="d-md-flex justify-content-between gap-10">
+      <div class="img2">
+        <%= image_tag('quiz.jpg', alt: 'quiz', class: 'img-fluid image') %>
+      </div>
+      <div class="text2">
+        <h2 class="font-size-lg text-center">Get self assessment quiz to know more about yourself</h2>
+        <p class="font-size-md text-center">Discover tailored resources by taking our quiz quiz. Understand your mental health need and access articles, videos, and expert advice designed just for you.</p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="d-md-flex justify-content-between gap-10">
+      <div class="text2">
+        <h2 class="font-size-lg text-center">Explore the Resource Library</h2>
+        <p class="font-size-md text-center">Delve into a diverse resource library centered on mental health awareness. Find tailored articles, blogs, videos, and expert insights. Whether it's for inspiration, practical advice, or deeper understanding, this evolving library empowers your journey toward self-discovery.</p>
+      </div>
+      <div class="img2">
+        <%= image_tag('laptop.jpeg', alt: 'laptop', class: 'img-fluid image') %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hero3 d-md-flex flex-md-column bg-a7d5ff">
+  <div class="section">
+    <div class="d-md-flex justify-content-between gap-10">
+      <div class="img2">
+        <%= image_tag('doctor live.jpg', alt: 'quiz', class: 'img-fluid image') %>
+      </div>
+      <div class="text2">
+        <h2 class="font-size-lg text-center">Connect with Mental Health Professionals for Live Virtual Interaction</h2>
+        <p class="font-size-md text-center">Connecting with a mental health professional has never been easier. At MindWell Hub, we prioritize your well-being. Our user-friendly platform allows you to book a session with experienced professionals, providing you with the support you need from the comfort of your own space. Take the first step towards a healthier mind and a brighter future today.</p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="d-md-flex justify-content-between gap-10">
+      <div class="text2">
+        <h2 class="font-size-lg text-center">Chat with Our Supportive Bot, Anytime</h2>
+        <p class="font-size-md text-center">Sometimes, you just need someone to talk to, even when no one is around. Our supportive bot is here for you 24/7, ready to listen, engage, and provide valuable resources. Whether it's a late-night thought or a moment of self-reflection, our chatbot is your companion on your journey towards mental well-being. Feel free to reach out whenever you need a listening ear.</p>
+      </div>
+      <div class="img2">
+        <%= image_tag('bot and boy.avif', alt: 'laptop', class: 'img-fluid image') %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render 'footer'%>

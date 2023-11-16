@@ -1,0 +1,94 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.hero {
+  min-height: 100vh;
+  background-color: #a7d5ff; 
+}
+
+.hero2 {
+  min-height: 100vh;
+  background-color: #eaf3fa; 
+}
+
+.hero3{
+  min-height: 100vh;
+  background-color: #cedff9;
+}
+
+.navbar {
+  background-color: #a7d5ff; 
+  height: 8rem;
+  padding: 0 2rem;
+}
+
+.box-container {
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 90px;
+}
+
+.text {
+  max-width: 1000px; 
+}
+
+.text2{
+  max-width: 600px;
+  width: 90%;
+}
+
+.text h1 {
+  font-size: 3rem; 
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.text p {
+  font-size: 1.2rem; 
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 30px;
+}
+
+.img {
+  width: 80%;
+  height: auto;
+}
+
+.img2, .image{
+  width: 400px;
+  height: 200px;
+}
+
+
+.btn-purple,
+.btn-purple2 {
+  font-size: 1rem; 
+  font-weight: 700;
+  border-radius: 30px;
+  padding: 0.5rem 2rem;
+}
+
+.btn-purple2{
+  background-color: #cb6ce6;
+  color: #fff;
+}
+
+.btn-purple:hover,
+.btn-purple2:hover {
+  background-color: #cb6ce6;
+  color: #fff;
+}
+
+.section{
+  width: 1200px;
+  margin: auto;
+}
+
+.footer{
+  background-color: #6385dc;
+  height: 120px;
+  color: black;
+}
